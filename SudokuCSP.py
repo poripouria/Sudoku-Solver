@@ -127,7 +127,6 @@ class Sudoku():
 
     def revise(self, i, j, i_, j_):
         revised = False
-        
         for value in range(1, self.n + 1):
             if self.board[i][j] == value:
                 if not any(self.board[x][j_] == value for x in range(self.n) if x != i):
